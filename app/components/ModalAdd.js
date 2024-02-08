@@ -24,7 +24,7 @@ export default function ModalAddTodo() {
 
     const AddTodo = async () => {
         setLoading(true);
-        await fetch(`http://localhost:3000/todo`,{
+        await fetch(`${location.origin}/todo`,{
             method: "POST",
             body: JSON.stringify({ todo: todo}),
         });

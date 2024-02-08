@@ -11,7 +11,7 @@ export default function Archived () {
     const [searchedTodo,setSearchedTodo] = useState([])
     const getSearched = async () => {
         setLoading(true)
-        const todos = await (await fetch(`http://localhost:3000/todo/archived?q=${todo}`)).json()
+        const todos = await (await fetch(`${location.origin}/todo/archived?q=${todo}`)).json()
         setSearchedTodo(todos.data)
         setLoading(false)
 

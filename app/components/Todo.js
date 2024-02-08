@@ -13,7 +13,7 @@ export default function Todo({todo})
 
     const markAsDoing = async () => {
         setLoading(true);
-        await fetch(`http://localhost:3000/todo/doing`,{
+        await fetch(`${location.origin}/todo/doing`,{
             method: "put",
             body: JSON.stringify({ id: todo.id }),
         });

@@ -14,7 +14,7 @@ export default function Done({done})
 
     const markAsTodo = async () => {
         setLoading(true);
-        await fetch(`http://localhost:3000/todo`,{
+        await fetch(`${location.origin}/todo`,{
             method: "put",
             body: JSON.stringify({ id: done.id }),
         });
@@ -24,7 +24,7 @@ export default function Done({done})
     
     const moveToArchive = async () => {
         setLoading(true);
-        await fetch(`http://localhost:3000/todo/archived`,{
+        await fetch(`${location.origin}/todo/archived`,{
             method: "put",
             body: JSON.stringify({ id: done.id }),
         });

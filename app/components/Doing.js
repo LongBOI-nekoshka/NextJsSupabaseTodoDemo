@@ -12,7 +12,7 @@ export default function Doing({doing})
 
     const markAsComplete = async () => {
         setLoading(true);
-        await fetch(`http://localhost:3000/todo/done`,{
+        await fetch(`${location.origin}/todo/done`,{
             method: "put",
             body: JSON.stringify({ id: doing.id }),
         });
