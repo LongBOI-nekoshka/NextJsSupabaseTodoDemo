@@ -67,7 +67,7 @@ export default function Archived () {
                     {
                         searchedTodo.map((searched) => {
                             return (
-                                <Grid item>
+                                <Grid item key={searched.id}>
                                     <Card sx={{ maxWidth: 275 }} variant="outlined">
                                         <CardContent>
                                             <Box maxWidth={270} padding={1}>
