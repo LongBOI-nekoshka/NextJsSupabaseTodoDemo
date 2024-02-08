@@ -96,7 +96,7 @@ export default async function Home() {
                       {
                         todos.map((todo) => {
                           return (
-                            <Grid item>
+                            <Grid item key={todo.id}>
                               <Todo todo={todo} key={todo.id}/>
                             </Grid>
                           );
@@ -116,7 +116,7 @@ export default async function Home() {
                         {
                           onGoing.map((doing) => {
                             return (
-                              <Grid item>
+                              <Grid item key={doing.id}>
                                 <Doing doing={doing} key={doing.id}/>
                               </Grid>
                             );
@@ -136,7 +136,7 @@ export default async function Home() {
                       {
                         done.map((done) => {
                           return (
-                            <Grid item>
+                            <Grid item key={done.id}>
                               <Done done={done} key={done.id}/>
                             </Grid>
                           );
