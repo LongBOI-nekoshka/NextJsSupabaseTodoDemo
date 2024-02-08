@@ -22,7 +22,6 @@ export default function Login({isLogin}) {
   const handleClose = () => 
   {
     setOpenSnack(false)
-    setTypeError("")
   }
 
 
@@ -77,12 +76,12 @@ export default function Login({isLogin}) {
         <Snackbar 
           open={openSnack} 
           autoHideDuration={4000} 
-          onClose={() => {setOpenSnack(false);setTypeError("")}}
+          onClose={() => {setOpenSnack(false)}}
           anchorOrigin ={{vertical: 'top', horizontal: 'center'}}
         >
           <Alert
           onClose={handleClose}
-          severity={typeError == "" ? "error" : "success"}
+          severity={ !typeError ? "success" : "error"}
           variant="filled"
           sx={{ width: '100%' }}
           >
