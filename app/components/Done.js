@@ -7,7 +7,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import ArchiveIcon from '@mui/icons-material/Archive';
 import { useState } from "react"
 
-export default function Done({done})
+export default function Done({done,key})
 {
     const router = useRouter();
     const [loading,setLoading] = useState(false);

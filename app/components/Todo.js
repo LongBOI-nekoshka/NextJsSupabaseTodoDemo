@@ -6,7 +6,7 @@ import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import { useState } from "react";
 
-export default function Todo({todo})
+export default function Todo({todo,key})
 {
     const [loading,setLoading] = useState(false);
     const router = useRouter();

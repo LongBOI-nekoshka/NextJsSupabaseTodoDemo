@@ -5,7 +5,7 @@ import {Card,CardActions,CardContent,Typography,Button,Grid,CircularProgress,Box
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import CheckIcon from '@mui/icons-material/Check';
 import { useState } from "react"
-export default function Doing({doing})
+export default function Doing({doing,key})
 {
     const router = useRouter();
     const [loading,setLoading] = useState(false);
