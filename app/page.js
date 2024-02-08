@@ -56,7 +56,7 @@ export default async function Home() {
           {
             !session ? 
               <Grid item>
-                <Typography> Sign-in to see your todo</Typography>
+                <Typography> Sign-in to see your todo input your email and password to sign up or input your email and password to login</Typography>
               </Grid> : 
               <>
               </>
