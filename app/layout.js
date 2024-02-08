@@ -1,5 +1,4 @@
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
+export const dynamic = 'force-dynamic';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import Theme from "./components/Theme";
 import { Box } from '@mui/material';
