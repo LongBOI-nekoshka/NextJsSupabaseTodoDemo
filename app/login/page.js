@@ -1,7 +1,7 @@
 "use client";
 
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
-// import { createClient } from '@supabase/supabase-js'
+import { createClient } from '@supabase/supabase-js'
 import { useRouter } from "next/navigation";
 import {Button,Grid,LinearProgress,Box,TextField} from '@mui/material';
 import { useState } from "react";
@@ -11,7 +11,7 @@ import Alert from '@mui/material/Alert';
 export default function Login({isLogin}) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-  // const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+  createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
   const supabase = createClientComponentClient();
   const [password,setPassword] = useState("");
   const [username,setUsername] = useState("");
