@@ -110,7 +110,13 @@ export default function Login({isLogin}) {
                 <Button variant="outlined" onClick={handleSignUp}>Sign up</Button>
               </Grid>
               <Grid item>
-                <Button variant="outlined" onClick={handleSignIn}>Sign in</Button>
+                <Button variant="outlined" 
+                  onClick={handleSignIn} 
+                  onKeyDown={(e) => {
+                    if(e.key === "Enter")
+                    handleSignIn()
+                  }}
+                >Sign in</Button>
               </Grid>
             </> : null
           }
