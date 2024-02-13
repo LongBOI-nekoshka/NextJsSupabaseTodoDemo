@@ -109,11 +109,7 @@ export default function Login({isLogin}) {
               </Grid>
               <Grid item>
                 <Button variant="outlined" 
-                  onClick={handleSignIn} 
-                  onKeyDown={(e) => {
-                    if(e.key === "Enter")
-                    handleSignIn()
-                  }}
+                  onClick={handleSignIn}
                 >Sign in</Button>
               </Grid>
             </> : null
@@ -134,10 +130,20 @@ export default function Login({isLogin}) {
               alignItems="center"
             >
               <Grid item>
-                <TextField size="small" label="Email" value={username} type="email" onChange={(e) => setUsername(e.target.value)}/>
+                <TextField size="small" label="Email" value={username} type="email" onChange={(e) => setUsername(e.target.value)} 
+                  onKeyDown={(e) => {
+                    if(e.key === "Enter")
+                    handleSignIn()
+                  }}
+                />
               </Grid>
               <Grid item>
-                <TextField size="small" label="Password" value={password} type="password" onChange={(e) => setPassword(e.target.value)}/>
+                <TextField size="small" label="Password" value={password} type="password" onChange={(e) => setPassword(e.target.value)}
+                  onKeyDown={(e) => {
+                    if(e.key === "Enter")
+                    handleSignIn()
+                  }}
+                />
               </Grid>
             </Grid>
             :

@@ -17,7 +17,7 @@ export default function Archived () {
         setLoading(true)
         const todos = await (await fetch(`${location.origin}/todo/archived?q=${todo}`)).json()
         setSearchedTodo(todos.data)
-        if(todos.length === 0)
+        if(todos.data.length === 0)
         {  
             setSnack(true);
         }
@@ -27,7 +27,7 @@ export default function Archived () {
 
     const handleClose = () => 
     {
-        setOpenSnack(false)
+        setSnack(false)
     }
 
     return (
@@ -39,9 +39,9 @@ export default function Archived () {
             anchorOrigin ={{vertical: 'top', horizontal: 'center'}}
             >
                 <Alert
-                onClose={handleClose}
-                variant="filled"
-                sx={{ width: '100%' }}
+                    onClose={handleClose}
+                    variant="filled"
+                    sx={{ width: '100%' }}
                 >
                     No Data Fetched
                 </Alert>
@@ -96,8 +96,8 @@ export default function Archived () {
                             searchedTodo.map((searched) => {
                                 return (
                                     <Grid item key={searched.id}>
-                                        <Card sx={{ maxWidth: 275 }} variant="outlined">
-                                            <CardContent>
+                                        <Card sx={{ maxWidth: 275}} variant="outlined">
+                                            <CardContent >
                                                 <Box maxWidth={270} padding={1}>
                                                     <Typography variant="subtitle1" sx={{wordWrap: 'break-word'}}>
                                                         {
